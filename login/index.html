@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/utility.css">
+    <title>Firebase testing App</title>
+  </head>
+  <body>
+    <nav class="navv-main">
+      <div class="nav-main">
+          <div class="nav-img">
+              <a href="/"><i data-feather="chevron-left"></i></a>
+              <img src="/logo.png" alt="" onclick="location.href='/'">
+          </div>
+          <div class="nav-links">
+              <a href="#" class="nav-link ff-inter fs-2s">Contact</a>
+              <!-- <a href="#" class="nav-link ff-inter fs-2s">Reserve</a>
+              <button class="user-nav br-m"><i data-feather="user"></i>  <i data-feather="chevron-down"></i></button> -->
+          </div>
+      </div>
+    </nav>
+    
+    <div class="home-content">
+
+      <div class="form-container">
+        <form>
+            <label class="ff-inter fs-s" for="user-login">Email ID:</label>
+            <input class="input-user input-box fs-2s" type="email" name="user-login">
+            <label class="ff-inter fs-s" for="user-pwd">Password:</label>
+            <input class="input-pwd input-box fs-2s" type="password" name="user-pwd">
+        </form>
+        <a href="#" class="sign-in butt-main ff-inter fs-3s">Sign In</a>
+        <h3>OR</h3>
+        <a href="#" class="sign-in-with-g butt-sub ff-inter fs-3s">Sign In with Google</a>
+      </div>
+
+      <div class="logged-in ff-inter fs-s"></div>
+
+    </div>
+    
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
