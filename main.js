@@ -21,10 +21,17 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const authProvider = new GoogleAuthProvider();
 
+onAuthStateChanged(auth, (user)=>{
+  if (user){
+    location.href = "/venues/"
+  }
+})
+
 const signInBtn = document.querySelector(".sign-in");
 const signInWithG = document.querySelector(".sign-in-with-g");
 
-signInBtn.onclick = () => {
+signInBtn.onclick = (e) => {
+  e.preventDefault();
 
   const email = document.querySelector(".input-user").value;
   const pwd = document.querySelector(".input-pwd").value;
@@ -66,17 +73,4 @@ signInWithG.onclick = () => {
     const credential = GoogleAuthProvider.credentialFromError(error);
     // ...
   });
-}
-
-onAuthStateChanged(auth, (user)=>{
-  if (user){
-    document.querySelector(".logged-in").innerHTML = `
-    User: ${user.displayName}
-    <br> 
-    <img src="${user.photoURL}" referrerpolicy="no-referrer" alt="user">`;
-    location.href = "/venues/"
-  }
-  else{
-    document.querySelector(".logged-in").innerHTML = ``;
-  }
-})
+};
