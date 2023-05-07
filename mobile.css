@@ -1,0 +1,45 @@
+@media screen and (max-width: 500px) {    
+    .nav-main{
+        width: 100%;
+        max-width: 100%;
+        padding: 1% 5%;
+        padding-right: 10%;
+    }
+
+    .nav-img img{
+        width: 100px;
+    }
+
+    .home-content{
+        padding: 8% 6%;
+    }
+
+    .home-buttons{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .butt-main, .butt-sub{
+        text-align: center;
+    }
+
+    .popup-details{
+        grid-template-columns: none;
+        grid-template-rows: auto;
+        gap: 5rem;
+    }
+
+    .popup-modal-wrapper{
+        height: 93%;
+        overflow: scroll;
+        position: fixed;
+    }
+
+    .popup-modal{
+        width: 100%;
+    }
+
+    .venue-card{
+        gap: 2rem
+    }
+}
